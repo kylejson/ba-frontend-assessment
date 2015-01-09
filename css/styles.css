@@ -1,0 +1,318 @@
+/*
+* Palette
+*
+* Light Gray #e6e6e6
+* Dark Gray(text) #555555
+* Dark Gray(rules) #c4c4c4
+* Oranje #dc6e2d
+* Dark Blue #2f3566
+*/
+
+/*
+* General
+*/
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.read-more {
+  color: #dc6e2d;
+  font-family: 'Helvetica Neue';
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: #555;
+  font-family: 'Helvetica Neue';
+  font-size: 16px;
+  line-height: 25px;
+  margin: 10px 0px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #555555;
+  font-family: 'Helvetica Neue';
+  font-size: 21px;
+  font-weight: 400;
+  margin: 20px 0px;
+}
+
+h3 > span {
+  background-color: #2f3566;
+  border-radius: 3px;
+  color: #fff;
+  padding: 3px 9px;
+}
+
+h4 {
+  color: #555;
+  font-family: 'Helvetica Neue';
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: #2f3566;
+  font-family: 'Helvetica Neue';
+  font-size: 17px;
+  font-weight: 400;
+  width: 80%;
+}
+
+article > img {
+  box-shadow: 2px 2px 2px 1px #ccc;
+}
+
+.btn {
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue';
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+}
+
+.btn-oranje {
+  background-color: #dc6e2d;
+}
+
+/*
+* Grid
+* The PSD used a 12 column grid overlay, but I just wrote a quick 6 column
+* because the greatest amount of columns in the design is 3
+*/
+
+.grid-wrap {
+    margin: 0px auto;
+    max-width: 1200px;
+    padding: 10px;
+    width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Clearing for new rows */
+.row:before, .row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+[class*='column-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+}
+
+.column-1 {
+  width: 16.66%;
+}
+
+.column-2 {
+  width: 33.33%;
+}
+
+.column-3 {
+  width: 50%;
+}
+
+.column-4 {
+  width: 66.66%;
+}
+
+.column-5 {
+  width: 83.33%;
+}
+
+.column-6 {
+  width: 100%;
+}
+
+.padded-column {
+  padding: 0px 10px;
+}
+
+/*
+* Media Queries
+*/
+
+@media (max-width: 800px) {
+  [class*='column-'] {
+    width: 100%; /* 100% width for sections */
+  }
+}
+
+/* Mobile Breakpoint(I know this is redundant for this particular design layout) */
+@media (max-width: 480px) {
+  [class*='column-'] {
+    width: 100%;
+  }
+}
+
+/*
+* Sections
+*/
+
+section {
+  padding: 50px 0px;
+}
+
+section h1 {
+  color: #2f3566;
+  font-family: 'Helvetica Neue';
+  font-size: 36px;
+  font-weight: 200; /* was 'regular' in the PSD but didn't match up stylistically */
+}
+
+.heading {
+  border-bottom: 2px solid #c4c4c4;
+  margin-bottom: 50px;
+  padding: 20px 0px;
+}
+
+.heading  h2 {
+  color: #2f3566;
+  font-family: 'Helvetica Neue';
+  font-size: 30px;
+  font-weight: 500; /* was 'medium' in the PSD but didn't match up stylistically */
+}
+
+#tip-previews {
+  margin: 20px;
+}
+
+#tip-previews > .active {
+  background: #e6e6e6;
+}
+
+.preview {
+  border-top: 1px solid #c4c4c4;
+  clear: both;
+  cursor: pointer;
+  min-height: 80px;
+  padding: 5px;
+}
+
+.preview > img {
+  float: left;
+  margin-right: 10px;
+}
+
+.more-tips {
+  border-top: 1px solid #c4c4c4;
+  clear: both;
+}
+
+.more-tips > .btn {
+  float: left;
+  margin-right: 5px;
+}
+
+.more-tips > span {
+  color: #555;
+  diplay: block;
+  font-family: 'Helvetica Neue';
+  font-size: 13px;
+  font-weight: 500;
+  float: right;
+  margin-top: 10px;
+  width: 225px;
+}
+
+#instructions {
+  background-color: #e6e6e6;
+}
+
+.split-pill { /* class because most likely a common UI element */
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  color: #555;
+  display: table;
+  float: right;
+  font-family: 'Helvetica Neue';
+  font-size: 16px;
+  font-weight: 500;
+  width: 250px;
+}
+
+.split-pill > li {
+  cursor: pointer;
+  display: table-cell;
+  text-align: center;
+  padding: 5px 10px;
+  width: auto;
+}
+
+.split-pill li:first-child {
+  border-right: 1px solid #c4c4c4;
+}
+
+.split-pill > .active {
+  background-color: #fff;
+  border-radius: 0px 5px 5px 0px;
+  color: #2f3566;
+}
+
+#slides {
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#slides > .slide-item {
+  background-color: #c4c4c4;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px;
+  list-style: none;
+  margin: 0px -1px;
+  width: 50px;
+}
+
+.slide-item:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.slide-item:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
+#slides > .active{
+  background-color: #2f3566;
+}
+
+/*
+* Nav
+*/
+
+nav {
+  border-bottom: 1px solid #2f3566;
+  border-top: 5px solid #e6e6e6;
+}
